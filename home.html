@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aarohn Trade Overseas Private Limited</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 60px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .section-title p {
+            color: #bbb;
+            margin-top: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat {
+            background: #171717;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .stat h3 {
+            font-size: 45px;
+            color: #d4a762;
+        }
+
+        .stat p {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .about-text h2 {
+            font-size: 55px;
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #ccc;
+            line-height: 1.9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: #171717;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #d4a762;
+        }
+
+        .feature p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.918);
+
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #d4a762;
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* MOBILE */
+
+        .menu-toggle {
+            display: none;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media(max-width:768px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: #111;
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+        }
+    </style>
+</head>
+<script>
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+</script>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Aarohn Trade Overseas">
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#markets">Markets</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#contact" class="nav-btn">
+            Send Inquiry
+        </a>
+
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+
+    </nav>
+
+    <!-- HERO SLIDER -->
+
+    <section class="hero">
+
+        <div class="slider">
+
+            <div class="slide active">
+                <img src="images/pulses1.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images/pulses2.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="images/soapnuts.jpg" alt="">
+            </div>
+
+        </div>
+        <div class="hero-overlay">
+
+            <h1>Premium Indian Pulses & Soapnuts<br></h1>
+            <h2>Exported Worldwide<br></h2>
+
+            <p>
+                Aarohn Trade Overseas Private Limited delivers premium quality Lentils (Pulses) and Natural Soapnuts to
+                international buyers across Europe, USA, Canada, Australia and New Zealand.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Explore Products
+            </a>
+
+        </div>
+
+    </section>
+
+    <style>
+        /* NAVBAR */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 95px;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 167, 98, 0.2);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 75px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            transition: .3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d4a762;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4a762;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            padding: 12px 28px;
+            background: #d4a762;
+            color: #111;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-overlay span {
+            color: #d4a762;
+            letter-spacing: 5px;
+            font-size: 15px;
+        }
+
+        .hero-overlay h1 {
+            font-size: 90px;
+            line-height: 1;
+            font-family: 'Cormorant Garamond', serif;
+            margin: 20px 0;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-overlay p {
+            max-width: 850px;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            color: #eee;
+        }
+
+        .hero-btn {
+            padding: 18px 40px;
+            background: #d4a762;
+            color: #111;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .navbar {
+                padding: 0 20px;
+                height: 80px;
+            }
+
+            .logo img {
+                height: 55px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+            .hero-overlay h1 {
+                font-size: 50px;
+            }
+
+            .hero-overlay p {
+                font-size: 16px;
+            }
+
+        }
+    </style>
+
+    <script>
+
+        const slides = document.querySelectorAll('.slide');
+
+        let index = 0;
+
+        setInterval(() => {
+
+            slides[index].classList.remove('active');
+
+            index = (index + 1) % slides.length;
+
+            slides[index].classList.add('active');
+
+        }, 4000);
+
+    </script>
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h3>20+</h3>
+                    <p>Export Markets</p>
+                </div>
+
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Quality Checked</p>
+                </div>
+
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+
+                <div class="stat">
+                    <h3>2026</h3>
+                    <p>Established</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--about section-->
+    <!--style-->
+    <style>
+        .about-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #d4a762;
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .about-btn:hover {
+            background: #d4a762;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <section id="about">
+
+        <div class="container about">
+
+            <img src="images/logo.jpeg" alt="About">
+
+            <div class="about-text">
+
+                <h2>About Aarohn Trade Overseas</h2>
+
+                <p>
+                    Aarohn Trade Overseas Private Limited is a New Delhi based export company specializing in premium
+                    quality lentils and natural soapnuts. We are committed to supplying agricultural products that meet
+                    international quality standards while ensuring reliability, consistency and customer satisfaction.
+                </p>
+                <a href="#about" class="about-btn">Read More</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!--products section-->
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 -20px 40px rgba(141, 127, 127, 0.6) inset;
+        }
+
+        .section h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #cfcfcf;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #161616;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #cfcfcf;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            font-size: 12px;
+            background: #222;
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: #d4a762;
+        }
+
+        .product-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #d4a762;
+            color: #000;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .product-btn:hover {
+            background: #d4a762;
+        }
+
+        .features1 {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: left;
+        }
+
+        .feature1-box {
+            background: #151515;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .feature1-box h4 {
+            margin-bottom: 8px;
+            color: #d4a762;
+        }
+    </style>
+
+    <section class="section" id="products">
+
+        <h1>Our Products</h1>
+        <p>Premium Export Quality Products. We offer a wide range of high-quality, natural and sustainable products
+            sourced from trusted farmers.</p>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="images/Red Lentils.jpg" alt="Red Lentils">
+                <div class="card-content">
+                    <h3>Red Lentils</h3>
+                    <p>Red Lentils (Masoor Dal) are small, orange-red legumes commonly used in Indian cooking.</p>
+                    <div class="tags">
+                        <span class="tag">Premium</span>
+                        <span class="tag">High Protein</span>
+                        <span class="tag">Natural</span>
+                    </div>
+                    <a href="#" class="product-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Green Lentils.jpg" alt="Green Lentils">
+                <div class="card-content">
+                    <h3>Green Lentils</h3>
+                    <p>Green Lentils are firm, earthy-flavored lentils that hold their shape after cooking.</p>
+                    <div class="tags">
+                        <span class="tag">Eco Friendly</span>
+                        <span class="tag">Chemical Free</span>
+                        <span class="tag">Organic</span>
+                    </div>
+                    <a href="#" class="product-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Black Lentils.jpg" alt="Black Lentils">
+                <div class="card-content">
+                    <h3>Black Lentils</h3>
+                    <p>Black Lentils are small, dark-colored lentils with a rich, earthy flavor.</p>
+                    <div class="tags">
+                        <span class="tag">Pure</span>
+                        <span class="tag">Aromatic</span>
+                        <span class="tag">Export Quality</span>
+                    </div>
+                    <a href="#" class="product-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Pigeon Peas.jpg" alt="Pigeon Peas">
+                <div class="card-content">
+                    <h3> Pigeon Peas</h3>
+                    <p>Toor Dal (Arhar Dal / Pigeon Pea) is a staple pulse in Indian households.</p>
+                    <div class="tags">
+                        <span class="tag">Fresh</span>
+                        <span class="tag">Pure</span>
+                        <span class="tag">Healthy</span>
+                    </div>
+                    <a href="#" class="product-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Black Gram.jpg" alt="Black Gram">
+                <div class="card-content">
+                    <h3>Black Gram</h3>
+                    <p>Urad Dal (Black Gram),has a strong earthy flavor and becomes very creamy when cooked or ground.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Fresh</span>
+                        <span class="tag">Premium</span>
+                        <span class="tag">Natural</span>
+                    </div>
+                    <a href="#" class="product-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Brown Lentils.jpg" alt="Brown Lentils">
+                <div class="card-content">
+                    <h3>Brown Lentils</h3>
+                    <p>Whole Masoor (Brown Lentils) are the un-split version of red lentils.</p>
+                    <div class="tags">
+                        <span class="tag">Nutritious</span>
+                        <span class="tag">Fiber Rich</span>
+                        <span class="tag">Farm Fresh</span>
+                    </div>
+                    <a href="#" class="product-btn">View Details</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="features1">
+
+            <div class="feature1-box">
+                <h4>Export Quality</h4>
+                <p>International quality standards ensured in every product.</p>
+            </div>
+
+            <div class="feature1-box">
+                <h4>Sustainable Sourcing</h4>
+                <p>Ethically sourced from trusted farmers and suppliers.</p>
+            </div>
+
+            <div class="feature1-box">
+                <h4>Secure Packaging</h4>
+                <p>Hygienically packed to maintain freshness and quality.</p>
+            </div>
+
+            <div class="feature1-box">
+                <h4>Global Shipping</h4>
+                <p>Reliable worldwide shipping with on-time delivery.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--features section why choose us -->
+    <section class="why-choose-us" id="features">
+        <style>
+            .why-choose-us {
+                position: relative;
+                background: url('images/choose\ us.jpg') center/cover no-repeat;
+                padding: 90px 20px;
+                color: #fff;
+            }
+
+            .why-choose-us::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.65);
+                z-index: 1;
+            }
+
+            .why-choose-us .container {
+                position: relative;
+                z-index: 2;
+            }
+        </style>
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+            </div>
+
+            <div class="features">
+
+                <div class="feature">
+                    <h3>Premium Quality</h3>
+                    <p>We ensure strict quality inspection at every stage to deliver only the finest spices.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Reliable Supply</h3>
+                    <p>Strong sourcing network and dependable logistics ensure on-time global delivery.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Global Reach</h3>
+                    <p>Supplying premium Indian spices to buyers across multiple international markets.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Hygienic Processing</h3>
+                    <p>Processed in clean, certified facilities maintaining international food safety standards.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Authentic Taste</h3>
+                    <p>Preserving natural aroma, flavor, and freshness of traditional Indian spices.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Trusted Exporter</h3>
+                    <p>Committed to long-term business relationships built on trust and transparency.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!---->
+
+    <!--export markets section-->
+
+    <style>
+        .export-markets {
+            position: relative;
+            padding: 90px 20px;
+            color: #fff;
+        }
+
+        .export-markets .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 -20px 40px rgba(141, 127, 127, 0.6) inset;
+
+        }
+
+
+        .export-markets .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .section-title p {
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+
+        /* GRID */
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* CARD STYLE */
+        .market-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* HOVER EFFECT */
+        .market-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 179, 71, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* TITLE */
+        .market-card h3 {
+            color: #ffb347;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        /* DESCRIPTION */
+        .market-card p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        /* TAG */
+        .market-card span {
+            font-size: 12px;
+            color: #ddd;
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .market-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <section class="export-markets">
+
+        <div class="overlay"></div>
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Export Markets</h2>
+                <p>Countries We Serve with Premium Indian Spices</p>
+            </div>
+
+            <div class="market-grid">
+
+                <div class="market-card">
+                    <h3>Europe</h3>
+                    <p>Supplying high-quality spices to premium food brands and wholesalers across Europe.</p>
+                    <span>Organic • Certified • Premium Grade</span>
+                </div>
+
+                <div class="market-card">
+                    <h3>USA & Canada</h3>
+                    <p>Trusted exporter delivering authentic Indian spices to North American markets.</p>
+                    <span>FDA Compliance • Fast Delivery</span>
+                </div>
+
+                <div class="market-card">
+                    <h3>Australia & New Zealand</h3>
+                    <p>Providing fresh, hygienic and export-quality spices to retail and bulk buyers.</p>
+                    <span>Halal • Hygienic Processing</span>
+                </div>
+
+                <div class="market-card">
+                    <h3>Middle East</h3>
+                    <p>Strong supply chain for bulk spice distribution in GCC countries.</p>
+                    <span>Bulk Export • Competitive Pricing</span>
+                </div>
+
+                <div class="market-card">
+                    <h3>Asia</h3>
+                    <p>Expanding presence across Asian countries with premium spice range.</p>
+                    <span>Fresh Harvest • Farm Direct</span>
+                </div>
+
+                <div class="market-card">
+                    <h3>Africa</h3>
+                    <p>Reliable spice exports supporting food industries across African markets.</p>
+                    <span>Long-Term Supply • Trusted Quality</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--gallery-->
+
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* IMAGE CARD STYLE */
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+
+        /* HOVER EFFECT */
+        .gallery img:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.1);
+        }
+
+        /* OPTIONAL: SECTION SHADOW IMPACT */
+        #gallery .container {
+            padding: 40px 20px;
+            border-radius: 15px;
+        }
+    </style>
+    <section id="gallery">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Product Gallery</h2>
+                <p>Our Export Products</p>
+            </div>
+
+            <div class="gallery">
+
+                <img src="images/soapnut01.jpg">
+                <img src="images/soapnut powder.jpg">
+                <img src="images/toor dal.jpg">
+                <img src="images/red lentils02.jpg">
+                <img src="images/masoor dal.jpg">
+                <img src="images/soapnut02.jpg">
+                <img src="images/green dal.jpg">
+                <img src="images/brown dal.jpg">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--contact section-->
+    <style>
+        #contact {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa, #eef2f3);
+        }
+
+        .contact-wrapper {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDE */
+        .contact-left {
+            flex: 1;
+        }
+
+        .contact-left h2 {
+            font-size: 40px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .subtext {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #d4a762;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #d4a762;
+            transform: translateY(-3px);
+        }
+
+        /* RIGHT CARD */
+        .contact-right {
+            flex: 1;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #d4a762;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            color: #d4a762;
+        }
+
+        .info-card p {
+            margin: 10px 0;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-left h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+    <section id="contact">
+        <div class="contact-wrapper">
+
+            <div class="contact-left">
+                <h2>Get In Touch</h2>
+                <p class="subtext">
+                    Looking for a trusted supplier of Lentils or Soapnuts? We are ready to assist you with export
+                    inquiries.
+                </p>
+
+                <a href="mailto:Sales@aarohn.com" class="btn">Send Inquiry</a>
+            </div>
+
+            <div class="contact-right">
+
+                <div class="info-card">
+                    <h3>Contact Details</h3>
+
+                    <p><strong>Contact Person:</strong> Kanishk Kathuria</p>
+                    <p><strong>Designation:</strong> Director</p>
+                    <p><strong>Email:</strong> Sales@aarohn.com</p>
+                    <p><strong>Mobile:</strong> +91 9999050937</p>
+                    <p><strong>Address:</strong> F-94 Kirti Nagar, New Delhi - 110015, India</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+#footer {
+    background: #0b0b0b;
+    color: #f5f5f5;
+    padding: 70px 20px 25px;
+    font-family: "Segoe UI", sans-serif;
+    position: relative;
+}
+
+/* GOLD LINE */
+.footer-line {
+    width: 90px;
+    height: 2px;
+    background: linear-gradient(90deg, #c9a227, #f5d76e);
+    margin: 0 auto 25px;
+    border-radius: 10px;
+}
+
+/* BRAND */
+.footer-brand {
+    text-align: center;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #b5b5b5;
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* LUXURY LINKS */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.footer-links a {
+    color: #d6d6d6;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* GOLD HOVER UNDERLINE */
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 1px;
+    background: linear-gradient(90deg, #c9a227, #f5d76e);
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* DIVIDER */
+.footer-divider {
+    margin: 40px auto 20px;
+    width: 80%;
+    height: 1px;
+    background: #1f1f1f;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 20px;
+        text-align: center;
+    }
+}
+</style>
+
+<footer id="footer">
+
+    <div class="footer-brand">
+
+        <div class="footer-line"></div>
+
+        <h2>Aarohn Trade Overseas</h2>
+
+        <p>
+            Premium exporter of finest Lentils (Pulses) and Natural Soapnuts from India.
+            Delivering purity, trust, and excellence to global markets.
+        </p>
+
+    </div>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#quality">Quality</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        © 2026 Aarohn Trade Overseas Private Limited. All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</head>
+
+</html>
