@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         * {
@@ -24,54 +25,6 @@
             background: #0f0f0f;
             color: #fff;
             overflow-x: hidden;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 60px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .section-title p {
-            color: #bbb;
-            margin-top: 10px;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .stat {
-            background: #171717;
-            padding: 40px;
-            border-radius: 20px;
-        }
-
-        .stat h3 {
-            font-size: 45px;
-            color:#0080E0;
-        }
-
-        .stat p {
-            color: #aaa;
-            margin-top: 10px;
         }
 
         .about {
@@ -90,21 +43,39 @@
             font-size: 55px;
             font-family: 'Cormorant Garamond', serif;
             margin-bottom: 20px;
+            color: #1c076b;
         }
 
         .about-text p {
-            color: #ccc;
+            color: black;
             line-height: 1.9;
+        }
+
+        .about-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #000050;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .about-btn:hover {
+            background: #000050;
+            transform: scale(1.05);
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
         .feature {
-            background: #171717;
+            background: white;
             padding: 40px;
             border-radius: 20px;
             text-align: center;
@@ -113,17 +84,17 @@
         .feature h3 {
             margin-bottom: 15px;
             font-size: 24px;
-            color:#0080E0;
+            color: #001B7A;
         }
 
         .feature p {
-            color: #aaa;
+            color: black;
             line-height: 1.7;
         }
 
         .feature:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.918);
+            background: #8aaedd;
 
         }
 
@@ -195,8 +166,6 @@
 </script>
 
 <body>
-
-
     <!-- NAVBAR -->
 
     <nav class="navbar">
@@ -221,8 +190,6 @@
         <div class="menu-toggle" id="menuToggle">
             ☰
         </div>
-
-
     </nav>
 
     <!-- HERO SLIDER -->
@@ -262,9 +229,8 @@
 
     </section>
 
+    <!-- NAVBAR style -->
     <style>
-        /* NAVBAR */
-
         .navbar {
             position: fixed;
             top: 0;
@@ -275,7 +241,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(0, 0, 0, 0.85);
+            background: white;
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(212, 167, 98, 0.2);
             z-index: 1000;
@@ -293,7 +259,7 @@
         }
 
         .nav-links a {
-            color: #fff;
+            color: black;
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
@@ -308,12 +274,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background:#0050A0;
+            background: #0050A0;
             transition: .3s;
         }
 
         .nav-links a:hover {
-            color:#0050A0;
+            color: #0050A0;
         }
 
         .nav-links a:hover::after {
@@ -322,7 +288,7 @@
 
         .nav-btn {
             padding: 12px 28px;
-            background: #000050;
+            background: #000050e7;
             color: #fff;
             font-weight: 600;
             text-decoration: none;
@@ -474,74 +440,31 @@
 
     </script>
 
-
-    <section>
-
-        <div class="container">
-
-            <div class="stats">
-
-                <div class="stat">
-                    <h3>20+</h3>
-                    <p>Export Markets</p>
-                </div>
-
-                <div class="stat">
-                    <h3>100%</h3>
-                    <p>Quality Checked</p>
-                </div>
-
-                <div class="stat">
-                    <h3>24/7</h3>
-                    <p>Customer Support</p>
-                </div>
-
-                <div class="stat">
-                    <h3>2026</h3>
-                    <p>Established</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
     <!--about section-->
-    <!--style-->
-    <style>
-        .about-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #000050;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        .about-btn:hover {
-            background:#000050;
-            transform: scale(1.05);
-        }
-    </style>
-
-    <section id="about">
+    <section id="about" style=" background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #d0e6f7 50%,
+    #d6e7f3 100%
+    );">
 
         <div class="container about">
 
-            <img src="images/logo.jpeg" alt="About">
+            <img src="images/pulses.jpg" alt="About">
 
             <div class="about-text">
 
                 <h2>About Aarohn Trade Overseas</h2>
 
                 <p>
-                    Aarohn Trade Overseas Private Limited is a New Delhi based export company specializing in premium
-                    quality lentils and natural soapnuts. We are committed to supplying agricultural products that meet
-                    international quality standards while ensuring reliability, consistency and customer satisfaction.
+                    Welcome to Aarohn Trade Overseas, a premier merchant exporter and global supplier of high-grade
+                    agricultural commodities originating from the fertile regions of India. Strategically positioned as
+                    a trusted bridge between indigenous farming communities and international commercial buyers, we
+                    specialize in the large-scale wholesale supply of premium Indian spices, agro products, grains, and
+                    pulses.
+
+                    Our foundational core is built upon absolute trade transparency, stringent quality benchmarks, and
+                    robust supply chain infrastructure tailored specifically for international B2B procurement.
                 </p>
                 <a href="#about" class="about-btn">Read More</a>
             </div>
@@ -550,122 +473,174 @@
     </section>
 
     <!--products section-->
-
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f0f0f;
-            color: #fff;
-        }
-
+        /* SECTION */
 
         .section {
-            padding: 60px 8%;
+            padding: 100px 8%;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 -20px 40px rgba(141, 127, 127, 0.6) inset;
+            background: linear-gradient(135deg,
+                    #ffffff 0%,
+                    #eef6fc 50%,
+                    #d6e7f3 100%);
         }
 
         .section h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+            font-size: 60px;
+            font-family: 'Cormorant Garamond', serif;
+            color: #001B7A;
+            margin-bottom: 15px;
         }
 
         .section p {
-            color: #cfcfcf;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            line-height: 1.6;
+            color: black;
+            max-width: 750px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
         }
+
+        /* PRODUCT GRID */
 
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 30px;
         }
 
+        /* PRODUCT CARD */
+
         .card {
-            background: #161616;
-            border-radius: 15px;
+            background: #8aaedd;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            transition: 0.3s;
+            border: 1px solid #dce8f2;
+            box-shadow: 0 10px 30px rgba(0, 132, 232, .08);
+            transition: .4s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 132, 232, .18);
         }
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 240px;
             object-fit: cover;
         }
 
+        /* CARD CONTENT */
+
         .card-content {
-            padding: 20px;
+            padding: 25px;
             text-align: left;
         }
 
         .card h3 {
-            margin: 0 0 10px;
-            font-size: 20px;
+            font-size: 24px;
+            color: #001B7A;
+            margin-bottom: 12px;
         }
 
         .card p {
-            font-size: 14px;
-            color: #cfcfcf;
-            margin-bottom: 15px;
+            color: black;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 18px;
         }
+
+        /* TAGS */
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .tag {
+            background: #EAF6FF;
+            color: #0077D9;
+            padding: 8px 14px;
+            border-radius: 30px;
             font-size: 12px;
-            background: #222;
-            padding: 5px 10px;
-            border-radius: 20px;
-            color: #0080E0;
+            font-weight: 600;
         }
+
+        /* BUTTON */
 
         .product-btn {
             display: inline-block;
-            padding: 10px 18px;
-            background:#000050;
+            padding: 12px 22px;
+            background: linear-gradient(135deg,
+                    #0050A0,
+                    #0080E0);
             color: #fff;
-            border-radius: 25px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 600;
+            transition: .3s;
         }
 
         .product-btn:hover {
-            background:#0080E0;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 128, 224, .25);
         }
 
+        /* PRODUCT HIGHLIGHTS */
+
         .features1 {
-            margin-top: 50px;
+            margin-top: 60px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            text-align: left;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
 
         .feature1-box {
-            background: #151515;
+            background: #ffffff;
             padding: 20px;
-            border-radius: 12px;
+            border-radius: 20px;
+            border: 1px solid #dce8f2;
+            box-shadow: 0 8px 25px rgba(0, 132, 232, .08);
+            transition: .4s;
+        }
+
+        .feature1-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 132, 232, .15);
         }
 
         .feature1-box h4 {
-            margin-bottom: 8px;
-            color:#0080E0;
+            color: #0080E0;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature1-box p {
+            color: black;
+            line-height: 1.7;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:992px) {
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section h1 {
+                font-size: 42px;
+            }
+
         }
     </style>
 
@@ -749,10 +724,10 @@
             </div>
 
             <div class="card">
-                <img src="images/Brown Lentils.jpg" alt="Brown Lentils">
+                <img src="images/chana dal.jpg" alt="Chana Dal">
                 <div class="card-content">
-                    <h3>Brown Lentils</h3>
-                    <p>Whole Masoor (Brown Lentils) are the un-split version of red lentils.</p>
+                    <h3>Chana Dal</h3>
+                    <p>Chana Dal (Split Gram) is a popular pulse used in various Indian dishes.</p>
                     <div class="tags">
                         <span class="tag">Nutritious</span>
                         <span class="tag">Fiber Rich</span>
@@ -793,6 +768,32 @@
     <!--features section why choose us -->
     <section class="why-choose-us" id="features">
         <style>
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            section {
+                padding: 100px 0;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            .section-title h2 {
+                font-size: 60px;
+                font-family: 'Cormorant Garamond', serif;
+
+            }
+
+            .section-title p {
+                color: #bbb;
+                margin-top: 10px;
+            }
+
             .why-choose-us {
                 position: relative;
                 background: url('images/choose\ us.jpg') center/cover no-repeat;
@@ -859,15 +860,13 @@
 
     </section>
 
-    <!---->
-
     <!--export markets section-->
-
     <style>
         .export-markets {
             position: relative;
             padding: 90px 20px;
-            color: #fff;
+            color: #001B7A;
+
         }
 
         .export-markets .overlay {
@@ -876,7 +875,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(135deg,
+                    #ffffff 0%,
+                    #d3e4f1 50%,
+                    #a6bac9 100%);
             box-shadow: 0 -20px 40px rgba(141, 127, 127, 0.6) inset;
 
         }
@@ -888,13 +890,13 @@
             text-align: center;
         }
 
-        .section-title h2 {
-            font-size: 42px;
+        .section-titles h2 {
+            font-size: 45px;
             margin-bottom: 10px;
-            letter-spacing: 1px;
+             font-family:'Cormorant Garamond',serif;
         }
 
-        .section-title p {
+        .section-titles p {
             opacity: 0.8;
             margin-bottom: 40px;
         }
@@ -908,7 +910,7 @@
 
         /* CARD STYLE */
         .market-card {
-            background: rgba(255, 255, 255, 0.08);
+            background: #6674a7;
             padding: 25px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
@@ -927,7 +929,7 @@
 
         /* TITLE */
         .market-card h3 {
-            color:#0080E0;
+            color: #001B7A;
             margin-bottom: 10px;
             font-size: 22px;
         }
@@ -942,7 +944,7 @@
         /* TAG */
         .market-card span {
             font-size: 12px;
-            color: #ddd;
+            color: black;
             opacity: 0.8;
         }
 
@@ -959,34 +961,41 @@
             }
         }
     </style>
-    <section class="export-markets">
+
+    <section class="export-markets" id="markets">
 
         <div class="overlay"></div>
 
         <div class="container">
 
-            <div class="section-title">
-                <h2>Export Markets</h2>
+            <div class="section-titles">
+                <h2>Our Core Product Portfolio & Export Markets</h2>
                 <p>Countries We Serve with Premium Indian Spices</p>
             </div>
 
             <div class="market-grid">
 
                 <div class="market-card">
-                    <h3>Europe</h3>
-                    <p>Supplying high-quality spices to premium food brands and wholesalers across Europe.</p>
+                    <h3>Premium Indian Spices</h3>
+                    <p>Sourced directly from certified cultivation zones, our inventory includes export-grade whole and
+                        ground varieties—featuring whole cumin seeds, turmeric powder, coriander, black pepper, and
+                        whole red chilies valued for their high volatile oil content and distinct aroma.</p>
                     <span>Organic • Certified • Premium Grade</span>
                 </div>
 
                 <div class="market-card">
-                    <h3>USA & Canada</h3>
-                    <p>Trusted exporter delivering authentic Indian spices to North American markets.</p>
+                    <h3>Export-Grade Rice</h3>
+                    <p>We supply premium Basmati rice (noted for its grain elongation and fragrance) as well as
+                        versatile non-Basmati rice variants, processed and milled to meet global consumer market
+                        standards.</p>
                     <span>FDA Compliance • Fast Delivery</span>
                 </div>
 
                 <div class="market-card">
-                    <h3>Australia & New Zealand</h3>
-                    <p>Providing fresh, hygienic and export-quality spices to retail and bulk buyers.</p>
+                    <h3>Wholesale Grains & Lentils</h3>
+                    <p>A comprehensive selection of nutrient-rich pulses, lentils (chickpeas, red lentils, green mung
+                        beans), and agricultural grains sorted and cleaned using advanced multi-stage processing
+                        technology to guarantee minimal foreign matter.</p>
                     <span>Halal • Hygienic Processing</span>
                 </div>
 
@@ -1013,39 +1022,83 @@
         </div>
 
     </section>
-    <!--gallery-->
+    
+    <!--GALLERY SECTION -->
 
-    <style>
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+   <style>
 
-        /* IMAGE CARD STYLE */
-        .gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            cursor: pointer;
-        }
+#gallery{
+    background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #d0e6f7 50%,
+    #b4c4cf 100%
+    );
+    padding:100px 0;
+}
 
-        /* HOVER EFFECT */
-        .gallery img:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            filter: brightness(1.1);
-        }
+#gallery .container{
+    padding:40px 20px;
+    border-radius:25px;
+}
 
-        /* OPTIONAL: SECTION SHADOW IMPACT */
-        #gallery .container {
-            padding: 40px 20px;
-            border-radius: 15px;
-        }
-    </style>
+/* GALLERY GRID */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+/* IMAGE CARD */
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:25px;
+    border:1px solid #dce8f2;
+    background:#ffffff;
+    box-shadow:0 10px 30px rgba(0,132,232,.08);
+    transition:.4s;
+    cursor:pointer;
+}
+
+/* HOVER EFFECT */
+
+.gallery img:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,132,232,.18);
+}
+
+/* SECTION TITLE */
+
+#gallery .section-title h2{
+    color:#001B7A;
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+}
+
+#gallery .section-title p{
+    color:#667085;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    #gallery .section-title h2{
+        font-size:42px;
+    }
+
+    .gallery img{
+        height:250px;
+    }
+
+}
+
+</style>
+
     <section id="gallery">
 
         <div class="container">
@@ -1057,14 +1110,16 @@
 
             <div class="gallery">
 
-                <img src="images/soapnut01.jpg">
-                <img src="images/soapnut powder.jpg">
-                <img src="images/toor dal.jpg">
+                <img src="images/Soapnut Shells.jpg">
+               <img src="images/soapnut powder.jpg">
+               <img src="images/soapnut02.jpg">
                 <img src="images/red lentils02.jpg">
-                <img src="images/masoor dal.jpg">
-                <img src="images/soapnut02.jpg">
+                <img src="images/toor dal.jpg">
+                
+                <img src="images/Chana Dal or Split Gram.jpg">
+                
                 <img src="images/green dal.jpg">
-                <img src="images/brown dal.jpg">
+                <img src="images/Black Gram (Black Urad).jpg">
 
             </div>
 
@@ -1072,325 +1127,327 @@
 
     </section>
 
-   <!-- CONTACT SECTION -->
-<section id="contact">
+    <!-- CONTACT SECTION -->
+    <section id="contact">
 
-    <div class="contact-container">
+        <div class="contact-container">
 
-        <div class="contact-content">
-            <span class="contact-tag">CONTACT US</span>
+            <div class="contact-content">
+                <span class="contact-tag">CONTACT US</span>
 
-            <h2>Let's Build Global Partnerships</h2>
+                <h2>Let's Build Global Partnerships</h2>
+
+                <p>
+                    We are committed to delivering premium-quality Lentils (Pulses)
+                    and Natural Soapnuts to international markets. Connect with us
+                    for business inquiries and export opportunities.
+                </p>
+
+                <a href="mailto:Sales@aarohn.com" class="contact-btn">
+                    Send Inquiry
+                </a>
+            </div>
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+                    <h4>Contact Person</h4>
+                    <p>Kanishk Kathuria</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p>Sales@aarohn.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Mobile</h4>
+                    <p>+91 9999050937</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Address</h4>
+                    <p>F-94 Kirti Nagar, New Delhi - 110015, India</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <style>
+
+        #contact {
+            position: relative;
+            padding: 100px 8%;
+            overflow: hidden;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.82)),
+                url('images/contact-bg.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT CONTENT */
+
+        .contact-content {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .contact-tag {
+            color: #0080E0;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .contact-content h2 {
+            font-size: 52px;
+            color: #fff;
+            margin: 15px 0;
+            line-height: 1.2;
+        }
+
+        .contact-content p {
+            color: #d0d0d0;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* BUTTON */
+
+        .contact-btn {
+            display: inline-block;
+            padding: 15px 38px;
+            background: #000050;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.4s;
+        }
+
+        .contact-btn:hover {
+            background: #000050;
+            transform: translateY(-4px);
+        }
+
+        /* RIGHT CARD */
+
+        .contact-card {
+            flex: 1;
+            min-width: 320px;
+
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+
+            padding: 40px;
+            border-radius: 25px;
+
+            border: 1px solid #0080E0;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(212, 175, 55, 0.08);
+        }
+
+        .contact-item {
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item h4 {
+            color: #0080E0;
+            margin-bottom: 5px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .contact-item p {
+            color: #f1f1f1;
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            #contact {
+                padding: 80px 5%;
+                background-attachment: scroll;
+            }
+
+            .contact-content h2 {
+                font-size: 38px;
+            }
+
+            .contact-container {
+                gap: 40px;
+            }
+
+            .contact-card {
+                padding: 30px;
+            }
+        }
+    </style>
+
+    <!--footer-->
+    <style>
+        #footer {
+           background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #eef6fc 50%,
+    #d6e7f3 100%
+    );
+            color: #f5f5f5;
+            padding: 70px 20px 25px;
+            font-family: "Segoe UI", sans-serif;
+            position: relative;
+        }
+
+        /* GOLD LINE */
+        .footer-line {
+            width: 90px;
+            height: 2px;
+            background: linear-gradient(90deg, #000050, #0080E0);
+            margin: 0 auto 25px;
+            border-radius: 10px;
+        }
+
+        /* BRAND */
+        .footer-brand {
+            text-align: center;
+        }
+
+        .footer-brand h2 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+              color:#001B7A;
+        }
+
+        .footer-brand p {
+            color: black;
+            max-width: 600px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* LUXURY LINKS */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .footer-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* GOLD HOVER UNDERLINE */
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 1px;
+            background: linear-gradient(90deg, #0050A0, #000050);
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+           color:#001B7A;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* DIVIDER */
+        .footer-divider {
+            margin: 40px auto 20px;
+            width: 80%;
+            height: 1px;
+            background: #1f1f1f;
+        }
+
+        /* COPYRIGHT */
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color:black;
+            letter-spacing: 1px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .footer-links {
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <footer id="footer">
+
+        <div class="footer-brand">
+
+            <div class="footer-line"></div>
+
+            <h2>Aarohn Trade Overseas</h2>
 
             <p>
-                We are committed to delivering premium-quality Lentils (Pulses)
-                and Natural Soapnuts to international markets. Connect with us
-                for business inquiries and export opportunities.
+                Premium exporter of finest Lentils (Pulses) and Natural Soapnuts from India.
+                Delivering purity, trust, and excellence to global markets.
             </p>
 
-            <a href="mailto:Sales@aarohn.com" class="contact-btn">
-                Send Inquiry
-            </a>
         </div>
 
-        <div class="contact-card">
-
-            <div class="contact-item">
-                <h4>Contact Person</h4>
-                <p>Kanishk Kathuria</p>
-            </div>
-
-            <div class="contact-item">
-                <h4>Email</h4>
-                <p>Sales@aarohn.com</p>
-            </div>
-
-            <div class="contact-item">
-                <h4>Mobile</h4>
-                <p>+91 9999050937</p>
-            </div>
-
-            <div class="contact-item">
-                <h4>Address</h4>
-                <p>F-94 Kirti Nagar, New Delhi - 110015, India</p>
-            </div>
-
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#quality">Quality</a>
+            <a href="#contact">Contact</a>
         </div>
 
-    </div>
+        <div class="footer-divider"></div>
 
-</section>
+        <div class="footer-bottom">
+            © 2026 Aarohn Trade Overseas Private Limited. All Rights Reserved.
+        </div>
 
-<style>
-/* ==========================
-   CONTACT SECTION
-========================== */
-
-#contact{
-    position: relative;
-    padding: 100px 8%;
-    overflow: hidden;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
-    url('images/contact-bg.jpg');
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.contact-container{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-/* LEFT CONTENT */
-
-.contact-content{
-    flex: 1;
-    min-width: 320px;
-}
-
-.contact-tag{
-    color:#0080E0;
-    letter-spacing: 3px;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.contact-content h2{
-    font-size: 52px;
-    color: #fff;
-    margin: 15px 0;
-    line-height: 1.2;
-}
-
-.contact-content p{
-    color: #d0d0d0;
-    line-height: 1.8;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-/* BUTTON */
-
-.contact-btn{
-    display: inline-block;
-    padding: 15px 38px;
-    background:#000050;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: 0.4s;
-}
-
-.contact-btn:hover{
-    background: #000050;
-    transform: translateY(-4px);
-}
-
-/* RIGHT CARD */
-
-.contact-card{
-    flex: 1;
-    min-width: 320px;
-
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-
-    padding: 40px;
-    border-radius: 25px;
-
-    border: 1px solid #0080E0 ;
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,0.4),
-    0 0 25px rgba(212,175,55,0.08);
-}
-
-.contact-item{
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.contact-item:last-child{
-    border-bottom: none;
-}
-
-.contact-item h4{
-    color:#0080E0;
-    margin-bottom: 5px;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
-
-.contact-item p{
-    color: #f1f1f1;
-    margin: 0;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    #contact{
-        padding: 80px 5%;
-        background-attachment: scroll;
-    }
-
-    .contact-content h2{
-        font-size: 38px;
-    }
-
-    .contact-container{
-        gap: 40px;
-    }
-
-    .contact-card{
-        padding: 30px;
-    }
-}
-</style>
-
-<!--footer-->
-<style>
-
-#footer {
-    background: #0b0b0b;
-    color: #f5f5f5;
-    padding: 70px 20px 25px;
-    font-family: "Segoe UI", sans-serif;
-    position: relative;
-}
-
-/* GOLD LINE */
-.footer-line {
-    width: 90px;
-    height: 2px;
-    background: linear-gradient(90deg,#000050,#0080E0);
-    margin: 0 auto 25px;
-    border-radius: 10px;
-}
-
-/* BRAND */
-.footer-brand {
-    text-align: center;
-}
-
-.footer-brand h2 {
-    font-size: 28px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.footer-brand p {
-    color: #b5b5b5;
-    max-width: 600px;
-    margin: auto;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* LUXURY LINKS */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 35px;
-}
-
-.footer-links a {
-    color: #d6d6d6;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    position: relative;
-    transition: 0.3s;
-}
-
-/* GOLD HOVER UNDERLINE */
-.footer-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 1px;
-    background: linear-gradient(90deg, #0050A0,#000050);
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-.footer-links a:hover::after {
-    width: 100%;
-}
-
-/* DIVIDER */
-.footer-divider {
-    margin: 40px auto 20px;
-    width: 80%;
-    height: 1px;
-    background: #1f1f1f;
-}
-
-/* COPYRIGHT */
-.footer-bottom {
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    letter-spacing: 1px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .footer-links {
-        gap: 20px;
-        text-align: center;
-    }
-}
-</style>
-
-<footer id="footer">
-
-    <div class="footer-brand">
-
-        <div class="footer-line"></div>
-
-        <h2>Aarohn Trade Overseas</h2>
-
-        <p>
-            Premium exporter of finest Lentils (Pulses) and Natural Soapnuts from India.
-            Delivering purity, trust, and excellence to global markets.
-        </p>
-
-    </div>
-
-    <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#quality">Quality</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-        © 2026 Aarohn Trade Overseas Private Limited. All Rights Reserved.
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 </head>
