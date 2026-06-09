@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aarohn Trade Overseas Private Limited | About Us</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background: #2e2d2d;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    /* MOBILE */
+
+    .menu-toggle {
+        display: none;
+        font-size: 32px;
+        color: white;
+        cursor: pointer;
+    }
+
+    @media(max-width:768px) {
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background: #111;
+            display: none;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 0;
+            gap: 20px;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+    }
+</style>
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+</script>
+
+<body>
+    <!--Navbar-->
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 95px;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 167, 98, 0.2);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            transition: .3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0050A0;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #0050A0;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            padding: 12px 28px;
+            background: #000050e7;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .navbar {
+                padding: 0 20px;
+                height: 80px;
+            }
+
+            .logo img {
+                height: 55px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+        }
+    </style>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Aarohn Trade Overseas">
+        </div>
+
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Product.html">Products</a>
+            <a href="Markets.html">Export Market</a>
+            <a href="#gallery">Gallery</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+
+        <a href="Contact.html" class="nav-btn">
+            Send Inquiry
+        </a>
+
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+    </nav>
+
+    /* ===========================
+    ABOUT PAGE CSS
+    =========================== */
+
+    <style>
+        .about-hero {
+            position: relative;
+            height: 100vh;
+            text-align: center;
+
+            background: linear-gradient(135deg,
+                    #ffffff,
+                    #eef6fc,
+                    #d6e7f3);
+            background-image: url('about-img/about\ banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            /* Increase to 0.65 if needed */
+            z-index: 1;
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .about-hero span {
+            color: blue;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .about-hero h1 {
+            font-size: 70px;
+            color: white;
+            margin: 20px 0;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .about-hero p {
+            max-width: 800px;
+            margin: auto;
+            color: white;
+            line-height: 1.8;
+        }
+
+        /* ===========================
+WHO WE ARE
+=========================== */
+
+        .about-company {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #d0e6f7 50%, #d6e7f3 100%);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-grid img {
+            width: 80%;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 132, 232, .12);
+        }
+
+        .about-grid h2 {
+            font-size: 52px;
+            color: #001B7A;
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .about-grid p {
+            color: #667085;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        /* ===========================
+MISSION & VISION
+=========================== */
+
+        .mission-vision {
+            padding: 100px 8%;
+            background: linear-gradient(135deg,
+                    #f8fbff,
+                    #e9f4ff);
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 800px;
+            margin: auto auto 70px;
+        }
+
+        .section-heading span {
+            color: #0084E8;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .section-heading h2 {
+            font-size: 60px;
+            margin: 10px;
+            color: #000050;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .section-heading p {
+            color: #5d6d86;
+            line-height: 1.8;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .mv-card {
+            background: #fff;
+            padding: 45px 35px;
+            border-radius: 25px;
+            text-align: center;
+
+            border: 1px solid #d9ebff;
+
+            box-shadow:
+                0 15px 40px rgba(0, 132, 232, .08);
+
+            transition: .4s;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-12px);
+
+            background: linear-gradient(135deg,
+                    #000050,
+                    #0084E8);
+
+            box-shadow:
+                0 25px 50px rgba(0, 132, 232, .25);
+        }
+
+        .mv-icon {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            margin-bottom: 25px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 35px;
+
+            background: linear-gradient(135deg,
+                    #0084E8,
+                    #45b6ff);
+        }
+
+        .mv-card h3 {
+            color: #000050;
+            font-size: 28px;
+            margin-bottom: 15px;
+            transition: .4s;
+        }
+
+        .mv-card p {
+            color: #5d6d86;
+            line-height: 1.8;
+            transition: .4s;
+        }
+
+        .mv-card:hover h3,
+        .mv-card:hover p {
+            color: #fff;
+        }
+
+        @media(max-width:768px) {
+
+            .section-heading h2 {
+                font-size: 42px;
+            }
+
+        }
+
+        /* ===========================
+CORE VALUES
+=========================== */
+        .core-values {
+            padding: 120px 8%;
+            background: linear-gradient(135deg,
+                    #c5ddfa,
+                    #e8f3ff);
+        }
+
+        .section-titles h2 {
+            text-align: center;
+            color: #001B7A;
+            font-size: 55px;
+            margin-bottom: 50px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .section-titles p {
+            text-align: center;
+            color: #001B7A;
+        }
+
+        .core-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .core-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+
+            padding: 35px;
+            border-radius: 25px;
+
+            border: 1px solid rgba(0, 132, 232, 0.15);
+
+            box-shadow:
+                0 10px 25px rgba(0, 132, 232, 0.08),
+                0 20px 50px rgba(0, 0, 80, 0.08);
+
+            transition: all .5s ease;
+
+            transform-style: preserve-3d;
+            overflow: hidden;
+        }
+
+        /* TOP LIGHT EFFECT */
+
+        .core-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, .6),
+                    transparent 50%);
+
+            pointer-events: none;
+        }
+
+        /* BLUE GLOW */
+
+        .core-card::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+
+            background: rgba(0, 132, 232, .15);
+            border-radius: 50%;
+
+            top: -70px;
+            right: -70px;
+
+            filter: blur(40px);
+        }
+
+        /* HOVER 3D */
+
+        .core-card:hover {
+            transform:
+                perspective(1000px) rotateX(8deg) rotateY(-8deg) translateY(-15px);
+
+            box-shadow:
+                0 25px 50px rgba(0, 132, 232, .2),
+                0 35px 70px rgba(0, 0, 80, .15);
+        }
+
+        /* ICON */
+
+        .core-icon {
+            width: 70px;
+            height: 70px;
+
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            background: linear-gradient(135deg,
+                    #0084E8,
+                    #000080);
+
+            color: #fff;
+            font-size: 28px;
+
+            box-shadow:
+                0 10px 25px rgba(0, 132, 232, .25);
+        }
+
+        .core-card h3 {
+            color: #000080;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .core-card p {
+            color: #5c6b86;
+            line-height: 1.8;
+        }
+
+        /* ===========================
+WHY CHOOSE US
+=========================== */
+
+        .why-us {
+            padding: 100px 0;
+            background: linear-gradient(135deg,
+                    #eef6fc,
+                    #d6e7f3);
+        }
+
+        .why-us h2 {
+            text-align: center;
+            color: #001B7A;
+            font-size: 55px;
+            margin-bottom: 50px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .why-grid div {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #0080E0;
+            color: #667085;
+            box-shadow: 0 10px 25px rgba(0, 132, 232, .08);
+        }
+
+        /* ===========================
+MARKETS
+=========================== */
+
+        .markets {
+            padding: 100px 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .markets h2 {
+            color: #001B7A;
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .markets p {
+            color: #667085;
+            margin-bottom: 30px;
+        }
+
+        .markets ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .markets li {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #EAF6FF;
+            color: #0080E0;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* ===========================
+TESTIMONIALS
+=========================== */
+
+
+
+        .testimonials {
+            padding: 120px 20px;
+            background: linear-gradient(135deg,
+                    #f8fbff,
+                    #eef5fc);
+        }
+
+        .testimonials .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .testimonials .section-title span {
+            color: #0084E8;
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .testimonials .section-title h2 {
+            font-size: 58px;
+            color: #001f7a;
+            margin-top: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .testimonials .section-title p {
+            max-width: 700px;
+            margin: 15px auto 0;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid #dbeafe;
+
+            box-shadow:
+                0 10px 30px rgba(0, 132, 232, .08);
+
+            transition: .4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: "❝";
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 80px;
+            color: rgba(0, 132, 232, .08);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow:
+                0 20px 50px rgba(0, 132, 232, .18);
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-card h4 {
+            color: #001f7a;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-card span {
+            color: #0084E8;
+            font-size: 14px;
+        }
+
+        @media(max-width:768px) {
+
+            .testimonials {
+                padding: 80px 20px;
+            }
+
+            .testimonials .section-title h2 {
+                font-size: 40px;
+            }
+        }
+
+        /* ===========================
+CONNECT & CTA
+=========================== */
+
+        .connect-cta {
+            padding: 120px 20px;
+            text-align: center;
+
+            background: linear-gradient(135deg,
+                    #001f7a 0%,
+                    #0057c2 50%,
+                    #0084e8 100%);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connect-cta::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            top: -120px;
+            right: -100px;
+        }
+
+        .connect-cta::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            bottom: -80px;
+            left: -80px;
+        }
+
+        .cta-content {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content span {
+            display: inline-block;
+            color: #bfe1ff;
+            font-size: 14px;
+            letter-spacing: 4px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .cta-content h2 {
+            font-size: 64px;
+            font-family: 'Cormorant Garamond', serif;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: auto auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .4s;
+        }
+
+        .primary {
+            background: #fff;
+            color: #0057c2;
+        }
+
+        .primary:hover {
+            transform: translateY(-5px);
+        }
+
+        .secondary {
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+        }
+
+        .secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        @media(max-width:768px) {
+
+            .connect-cta {
+                padding: 90px 20px;
+            }
+
+            .cta-content h2 {
+                font-size: 42px;
+            }
+
+            .cta-content p {
+                font-size: 16px;
+            }
+        }
+
+        /* ===========================
+RESPONSIVE
+=========================== */
+
+        @media(max-width:768px) {
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 42px;
+            }
+
+            .about-grid h2,
+            .mission h2,
+            .vision h2,
+            .values h2,
+            .why-us h2,
+            .markets h2,
+            .testimonials h2,
+            .connect h2,
+            .cta h2 {
+                font-size: 38px;
+            }
+
+        }
+    </style>
+
+    <section class="about-hero">
+
+        <div class="container">
+            <span>ABOUT AAROHN TRADE OVERSEAS</span>
+            <h1>Delivering Premium Quality Pulses & Soapnuts Worldwide</h1>
+            <p>
+                Building trusted partnerships through quality, reliability,
+                and excellence in global agricultural exports.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-company">
+
+        <div class="container about-grid">
+
+            <div>
+                <img src="images/logo.jpeg" alt="About Aarohn">
+            </div>
+
+            <div>
+                <h2>Who We Are</h2>
+
+                <p>
+                    Aarohn Trade Overseas Private Limited is a New Delhi based export company
+                    specializing in premium quality Pulses (Lentils) and Natural Soapnuts.
+                    We are committed to delivering products that meet international quality
+                    standards while maintaining reliability, transparency, and customer satisfaction.
+                </p>
+
+                <p>
+                    Through strong sourcing networks and quality-focused operations,
+                    we serve importers, wholesalers, distributors, and food businesses
+                    across Europe, USA, Canada, Australia, and New Zealand.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="mission-vision">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span>OUR PURPOSE</span>
+                <h2>Driving Growth Through Quality & Trust</h2>
+                <p>
+                    We are committed to delivering premium agricultural products while
+                    building long-term relationships with customers across global markets.
+                </p>
+            </div>
+
+            <div class="mv-grid">
+
+                <div class="mv-card">
+                    <div class="mv-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To supply premium quality agricultural products that meet
+                        international standards while ensuring reliability,
+                        transparency, and customer satisfaction.
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">🌍</div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become a globally trusted export company recognized for
+                        quality, innovation, sustainable sourcing, and excellence.
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">🤝</div>
+                    <h3>Our Values</h3>
+                    <p>
+                        Integrity, quality, commitment, sustainability, and strong
+                        customer relationships are at the heart of everything we do.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="core-values">
+
+        <div class="container">
+
+            <div class="section-titles">
+                <h2>Our Core Values</h2>
+                <p>
+                    The principles that guide our business and strengthen our relationships worldwide.
+                </p>
+            </div>
+
+            <div class="core-grid">
+
+                <div class="core-card">
+                    <div class="core-icon">✓</div>
+                    <h3>Quality First</h3>
+                    <p>
+                        Maintaining strict quality standards in every shipment to ensure customer satisfaction.
+                    </p>
+                </div>
+
+                <div class="core-card">
+                    <div class="core-icon">🤝</div>
+                    <h3>Integrity</h3>
+                    <p>
+                        Conducting business with honesty, transparency, and ethical practices.
+                    </p>
+                </div>
+
+                <div class="core-card">
+                    <div class="core-icon">🚚</div>
+                    <h3>Reliability</h3>
+                    <p>
+                        Ensuring timely delivery and dependable supply for global partners.
+                    </p>
+                </div>
+
+                <div class="core-card">
+                    <div class="core-icon">👥</div>
+                    <h3>Customer Focus</h3>
+                    <p>
+                        Building strong and lasting relationships through exceptional service.
+                    </p>
+                </div>
+
+                <div class="core-card">
+                    <div class="core-icon">🌱</div>
+                    <h3>Sustainability</h3>
+                    <p>
+                        Supporting responsible sourcing and environmentally conscious practices.
+                    </p>
+                </div>
+
+                <div class="core-card">
+                    <div class="core-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>
+                        Continuously improving our products, processes, and customer experience.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="testimonials">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>CLIENT FEEDBACK</span>
+                <h2>What Our Global Partners Say</h2>
+                <p>
+                    Trusted by importers, wholesalers, and distributors across international markets.
+                </p>
+            </div>
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Aarohn Trade Overseas consistently delivers premium quality pulses.
+                        Their professionalism and timely shipments make them a reliable partner.
+                    </p>
+                    <h4>David Anderson</h4>
+                    <span>Food Importer, Canada</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Excellent product quality and packaging standards.
+                        We have been sourcing from them for multiple shipments.
+                    </p>
+                    <h4>Michael Brown</h4>
+                    <span>Wholesale Distributor, Australia</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Their soapnuts and lentils meet international expectations.
+                        Communication and support are outstanding.
+                    </p>
+                    <h4>Sarah Williams</h4>
+                    <span>Retail Buyer, UK</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="connect-cta">
+
+        <div class="cta-content">
+
+            <span>CONNECT WITH US</span>
+
+            <h2>Let's Build Global Partnerships Together</h2>
+
+            <p>
+                Whether you're looking for premium quality Pulses, Natural Soapnuts,
+                or a reliable export partner, Aarohn Trade Overseas is ready to
+                support your business with consistent quality, dependable supply,
+                and worldwide delivery.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn primary">
+                    Contact Us Today
+                </a>
+
+                <a href="Product.html" class="cta-btn secondary">
+                    Explore Products
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--footer-->
+    <style>
+        #footer {
+            background: linear-gradient(135deg,
+                    #ffffff 0%,
+                    #eef6fc 50%,
+                    #d6e7f3 100%);
+            color: #f5f5f5;
+            padding: 70px 20px 25px;
+            font-family: "Segoe UI", sans-serif;
+            position: relative;
+        }
+
+        /* GOLD LINE */
+        .footer-line {
+            width: 90px;
+            height: 2px;
+            background: linear-gradient(90deg, #000050, #0080E0);
+            margin: 0 auto 25px;
+            border-radius: 10px;
+        }
+
+        /* BRAND */
+        .footer-brand {
+            text-align: center;
+        }
+
+        .footer-brand h2 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #001B7A;
+        }
+
+        .footer-brand p {
+            color: black;
+            max-width: 600px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* LUXURY LINKS */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .footer-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* GOLD HOVER UNDERLINE */
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 1px;
+            background: linear-gradient(90deg, #0050A0, #000050);
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #001B7A;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* DIVIDER */
+        .footer-divider {
+            margin: 40px auto 20px;
+            width: 80%;
+            height: 1px;
+            background: #1f1f1f;
+        }
+
+        /* COPYRIGHT */
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: black;
+            letter-spacing: 1px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .footer-links {
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <footer id="footer">
+
+        <div class="footer-brand">
+
+            <div class="footer-line"></div>
+
+            <h2>Aarohn Trade Overseas</h2>
+
+            <p>
+                Premium exporter of finest Lentils (Pulses) and Natural Soapnuts from India.
+                Delivering purity, trust, and excellence to global markets.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Product.html">Products</a>
+            <a href="Markets.html">Export Market</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            © 2026 Aarohn Trade Overseas Private Limited. All Rights Reserved.
+        </div>
+
+    </footer>
+</body>
+</html>

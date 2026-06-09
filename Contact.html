@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aarohn Trade Overseas Private Limited</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background: white;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .about img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 55px;
+        font-family: 'Cormorant Garamond', serif;
+        margin-bottom: 20px;
+        color: #1c076b;
+    }
+
+    .about-text p {
+        color: black;
+        line-height: 1.9;
+    }
+
+    .about-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: #000050;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+
+    .about-btn:hover {
+        background: #000050;
+        transform: scale(1.05);
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .feature {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .feature h3 {
+        margin-bottom: 15px;
+        font-size: 24px;
+        color: #001B7A;
+    }
+
+    .feature p {
+        color: black;
+        line-height: 1.7;
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
+        background: #8aaedd;
+
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        background: #000050;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-5px);
+    }
+
+
+    /* MOBILE */
+
+    .menu-toggle {
+        display: none;
+        font-size: 32px;
+        color: white;
+        cursor: pointer;
+    }
+
+    @media(max-width:768px) {
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background: #111;
+            display: none;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 0;
+            gap: 20px;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+    }
+</style>
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+</script>
+
+<body>
+
+    <!-- NAVBAR style -->
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 95px;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 167, 98, 0.2);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            transition: .3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0050A0;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #0050A0;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            padding: 12px 28px;
+            background: #000050e7;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: 1.5s;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-overlay span {
+            color: #d4a762;
+            letter-spacing: 5px;
+            font-size: 15px;
+        }
+
+        .hero-overlay h1 {
+            font-size: 90px;
+            line-height: 1;
+            font-family: 'Cormorant Garamond', serif;
+            margin: 20px 0;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-overlay p {
+            max-width: 850px;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            color: #eee;
+        }
+
+        .hero-btn {
+            padding: 18px 40px;
+            background: #000050;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .navbar {
+                padding: 0 20px;
+                height: 80px;
+            }
+
+            .logo img {
+                height: 55px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+            .hero-overlay h1 {
+                font-size: 50px;
+            }
+
+            .hero-overlay p {
+                font-size: 16px;
+            }
+
+        }
+    </style>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Aarohn Trade Overseas">
+        </div>
+
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Product.html">Products</a>
+            <a href="Markets.html">Export Market</a>
+            <a href="#gallery">Gallery</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+
+        <a href="Contact.html" class="nav-btn">
+            Send Inquiry
+        </a>
+
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+    </nav>
+
+    <style>
+        .contact-hero {
+            height: 100vh;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, .55),
+                    rgba(0, 0, 0, .65)),
+                url('https://i.pinimg.com/1200x/55/dd/05/55dd05639c69354309c7767d5b802d68.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-overlay {
+
+            padding: 20px;
+        }
+
+        .contact-hero span {
+            margin-top: 50px;
+            color: #7dc8ff;
+            letter-spacing: 4px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .contact-hero h1 {
+            font-size: 55px;
+            color: #fff;
+            margin: 20px 0;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .contact-hero p {
+            color: #f1f5f9;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 16px 38px;
+            background: linear-gradient(135deg,
+                    #001F7A,
+                    #0084E8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: .4s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        @media(max-width:768px) {
+
+            .contact-hero {
+                height: 60vh;
+            }
+
+            .contact-hero h1 {
+                font-size: 45px;
+            }
+
+            .contact-hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <section class="contact-hero">
+
+        <div class="hero-overlay">
+
+            <span>CONTACT US</span>
+
+            <h1>Let's Build Global Partnerships</h1>
+
+            <p>
+                Connect with Aarohn Trade Overseas Private Limited for premium quality
+                Pulses (Lentils) and Natural Soapnuts. We are ready to serve importers,
+                distributors, wholesalers and businesses worldwide.
+            </p>
+
+            <a href="Contact.html" class="hero-btn">
+                Send Inquiry
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <style>
+        .contact-info-section {
+            padding: 90px 8%;
+            background: #f8fbff;
+        }
+
+        .contact-info-section .section-title {
+            text-align: center;
+            max-width: 800px;
+            margin: auto auto 70px;
+        }
+
+        .contact-info-section .section-title span {
+            color: #0084E8;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .contact-info-section .section-title h2 {
+            font-size: 60px;
+            margin: 20px 0;
+            color: #000050;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .contact-info-section .section-title p {
+            color: #5d6d86;
+            line-height: 1.8;
+        }
+
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+
+            border: 1px solid #dbeafe;
+
+            transition: .4s;
+
+            box-shadow:
+                0 10px 25px rgba(0, 132, 232, .08);
+        }
+
+        .info-card:hover {
+            transform: translateY(-12px);
+
+            background: linear-gradient(135deg,
+                    #001F7A,
+                    #0084E8);
+
+            color: #fff;
+
+            box-shadow:
+                0 25px 50px rgba(0, 132, 232, .25);
+        }
+
+        .info-card:hover p,
+        .info-card:hover h3 {
+            color: #fff;
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            color: #001F7A;
+            margin-bottom: 12px;
+        }
+    </style>
+
+    <section class="contact-info-section">
+
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>We are ready to serve global buyers and importers.</p>
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <div class="icon">📍</div>
+                <h3>Office Address</h3>
+                <p>
+                    Aarohn Trade Overseas Private Limited<br>
+                    India
+                </p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">📞</div>
+                <h3>Phone Number</h3>
+
+                <a href="tel:  +91 9999050937" class="contact-link">
+                    +91 9999050937</a>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">✉️</div>
+                <h3>Email Address</h3>
+                <a href="email:   Sales@aarohn.com" class="email-link">
+                    Sales@aarohn.com</a>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">🌍</div>
+                <h3>Export Markets</h3>
+                <p>USA, Canada, Europe, Australia, UAE</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <style>
+        .contact-section {
+            padding: 100px 8%;
+            background:
+                linear-gradient(rgba(0, 31, 122, .85),
+                    rgba(0, 132, 232, .85)),
+                url('images/contact-bg.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .contact-container {
+            max-width: 1300px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+
+            align-items: center;
+        }
+
+        .contact-info {
+            color: #fff;
+        }
+
+        .contact-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, .15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #f1f5f9;
+        }
+
+        .info-box {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            background: rgba(255, 255, 255, .10);
+            backdrop-filter: blur(15px);
+
+            padding: 18px 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+
+            transition: .4s;
+        }
+
+        .info-box:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, .20);
+        }
+
+        .info-box span {
+            font-size: 30px;
+        }
+
+        .contact-form-box {
+            background: rgba(255, 255, 255, .95);
+
+            padding: 45px;
+            border-radius: 25px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, .15);
+
+            transition: .4s;
+        }
+
+        .contact-form-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-form-box h3 {
+            color: #001F7A;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        .contact-form-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form-box input,
+        .contact-form-box select,
+        .contact-form-box textarea {
+            padding: 15px;
+            border: 1px solid #dbeafe;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+            transition: .3s;
+            color: black;
+        }
+
+        .contact-form-box input:focus,
+        .contact-form-box select:focus,
+        .contact-form-box textarea:focus {
+            border-color: #0084E8;
+            box-shadow: 0 0 15px rgba(0, 132, 232, .15);
+        }
+
+        .contact-form-box button {
+            border: none;
+            padding: 16px;
+
+            background: linear-gradient(135deg,
+                    #001F7A,
+                    #0084E8);
+
+            color: #fff;
+            border-radius: 50px;
+
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .contact-form-box button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 132, 232, .25);
+        }
+
+        @media(max-width:992px) {
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info h2 {
+                font-size: 42px;
+            }
+        }
+    </style>
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- LEFT SIDE -->
+            <div class="contact-info">
+
+                <span class="contact-tag">🌍 GLOBAL EXPORT PARTNER</span>
+
+                <h2>Let's Build Global Partnerships</h2>
+
+                <p>
+                    Aarohn Trade Overseas Private Limited exports premium quality
+                    Pulses (Lentils) and Natural Soapnuts to international markets.
+                    Connect with us for product inquiries and business opportunities.
+                </p>
+
+                <div class="info-box">
+                    <span>📞</span>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p> +91 9999050937</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span>✉️</span>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>Sales@aarohn.com</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span>📍</span>
+                    <div>
+                        <h4>Location</h4>
+                        <p>India</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="contact-form-box">
+
+                <h3>Send Inquiry</h3>
+
+                <form>
+
+                    <input type="text" name="name" placeholder="Full Name" required>
+
+                    <input type="email" name="email" placeholder="Email Address" required>
+
+                    <input type="tel" name="tel" placeholder="Phone Number" required>
+
+                    <input type="text" name="text" placeholder="Country" required>
+
+                    <select>
+                        <option>Select Product</option>
+                        <option>Black Gram (Black Urad)</option>
+                        <option>Toor Dal</option>
+                        <option>Chane Ki Dal</option>
+                        <option>Moong Sabut Green</option>
+                        <option>Masoor Dal</option>
+                        <option>Soapnuts</option>
+                        <option>Soapnut Powder</option>
+                        <option>Soapnut Shells</option>
+                    </select>
+
+                    <textarea rows="5" placeholder="Your Requirement"></textarea>
+
+                    <button type="submit">
+                        Send Inquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <style>
+        .map-section iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+    </style>
+
+    <section class="map-section">
+        <iframe
+            src="https://maps.google.com/maps?q=F-94%20Kirti%20Nagar%20New%20Delhi%20110015&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <!--footer-->
+    <style>
+        #footer {
+            background: linear-gradient(135deg,
+                    #ffffff 0%,
+                    #eef6fc 50%,
+                    #d6e7f3 100%);
+            color: #f5f5f5;
+            padding: 70px 20px 25px;
+            font-family: "Segoe UI", sans-serif;
+            position: relative;
+        }
+
+        /* GOLD LINE */
+        .footer-line {
+            width: 90px;
+            height: 2px;
+            background: linear-gradient(90deg, #000050, #0080E0);
+            margin: 0 auto 25px;
+            border-radius: 10px;
+        }
+
+        /* BRAND */
+        .footer-brand {
+            text-align: center;
+        }
+
+        .footer-brand h2 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #001B7A;
+        }
+
+        .footer-brand p {
+            color: black;
+            max-width: 600px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* LUXURY LINKS */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .footer-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* GOLD HOVER UNDERLINE */
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 1px;
+            background: linear-gradient(90deg, #0050A0, #000050);
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #001B7A;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* DIVIDER */
+        .footer-divider {
+            margin: 40px auto 20px;
+            width: 80%;
+            height: 1px;
+            background: #1f1f1f;
+        }
+
+        /* COPYRIGHT */
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: black;
+            letter-spacing: 1px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .footer-links {
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <footer id="footer">
+
+        <div class="footer-brand">
+
+            <div class="footer-line"></div>
+
+            <h2>Aarohn Trade Overseas</h2>
+
+            <p>
+                Premium exporter of finest Lentils (Pulses) and Natural Soapnuts from India.
+                Delivering purity, trust, and excellence to global markets.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Product.html">Products</a>
+            <a href="Markets.html">Export Market</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            © 2026 Aarohn Trade Overseas Private Limited. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
